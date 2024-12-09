@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react'
 import ChatBox from './components/ChatBox'
 
 function App() {
