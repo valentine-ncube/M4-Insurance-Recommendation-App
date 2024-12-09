@@ -4,7 +4,7 @@ import ChatBox from './components/ChatBox'
 function App() {
   return (
     <div>
-      <h1>Insurance Recommendation Chatbot</h1>
+      <h3>Tina - Your AI Insurance Policy Assistant</h3>
       <ChatBox />
     </div>
   )

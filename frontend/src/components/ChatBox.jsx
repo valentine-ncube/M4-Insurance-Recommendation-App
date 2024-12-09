@@ -37,15 +37,15 @@ const ChatBox = () => {
   }
 
   return (
-    <div className="chat-container">
-      <div className="chat-box">
+    <div className={styles['chat-container']}>
+      <div className={styles['chat-box']}>
         {messages.map((message, index) => (
           <div key={index} className={message.sender}>
             <strong>{message.sender}</strong>: {message.text}
           </div>
         ))}
       </div>
-      <div className="input-area">
+      <div className={styles['input-area']}>
         <textarea
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
