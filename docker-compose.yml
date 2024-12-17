@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    container_name: backend-container
+    ports:
+      - '5001:5001'
+    environment:
+      - PORT=5001
+      - API_KEY=AIzaSyAbH3HXUhf1XP2AtpTNcXYIZ05rug3zNhI
+    volumes:
+      - ./backend:/usr/src/app
+      - /usr/src/app/node_modules
+
+  frontend:
+    build: ./frontend
+    container_name: frontend-container
+    ports:
+      - '5173:5173'
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
