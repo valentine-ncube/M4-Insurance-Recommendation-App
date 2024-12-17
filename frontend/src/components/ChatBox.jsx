@@ -66,8 +66,15 @@ const ChatBox = () => {
     <div className={styles['chat-container']}>
       <div className={styles['chat-box']}>
         {messages.map((message, index) => (
-          <div key={index} className={message.sender}>
-            <strong>{message.sender}</strong>: {message.text}
+          <div
+            key={index}
+            className={`${styles['message']} ${
+              message.sender === 'user'
+                ? styles['user-message']
+                : styles['tina-message']
+            }`}
+          >
+            {message.text}
           </div>
         ))}
       </div>

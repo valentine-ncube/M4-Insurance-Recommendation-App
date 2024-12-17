@@ -46,14 +46,32 @@ h3 {
   margin-bottom: 20px;
 }
 
-.user {
-  text-align: right;
-  color: #007bff; /* Blue for user text */
+/* Message Styles */
+.message {
+  display: flex;
+  margin-bottom: 10px;
 }
 
-.Tina {
-  text-align: left;
-  color: #d9534f; /* Red for Tina's responses */
+/* User Message */
+.user-message {
+  background-color: #007bff;
+  color: white;
+  align-self: flex-end;
+  border-radius: 15px 15px 0 15px;
+  padding: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+/* Tina's Message */
+.tina-message {
+  background-color: #e0e0e0;
+  color: #333;
+  align-self: flex-start;
+  border-radius: 15px 15px 15px 0;
+  padding: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
 }
 
 /* Input Area */
